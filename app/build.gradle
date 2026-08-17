@@ -75,6 +75,9 @@ dependencies {
     implementation 'androidx.compose.material3:material3:1.2.1'
     implementation 'androidx.compose.material:material-icons-extended:1.6.5'
 
+    // OPPO View Seamless Animation SDK
+    implementation files('libs/viewseamless-1.0.0.aar')
+
     playImplementation 'com.google.android.gms:play-services-ads-lite:22.3.0'
 }
 repositories {
