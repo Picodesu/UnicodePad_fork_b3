@@ -709,6 +709,20 @@ class UnicodeActivity : BaseActivity() {
             finishAction = R.string.share
             action = null
         }
+        // OPPO Seamless Animation
+        seamlessHelper = SeamlessAnimationHelper(this).also { helper ->
+            if (helper.isSupported()) {
+                window.decorView.doOnLayout {
+                    helper.setAnimationView(window.decorView)
+                    helper.setupSeamlessTransition(
+                        callback = object : OplusViewSeamless.AnimationCallback {
+                            override fun onAnimationStart() {}
+                            override fun onAnimationEnd() {}
+                        }
+                    )
+                }
+            }
+        }
         created = true
     }
 
