@@ -714,12 +714,7 @@ class UnicodeActivity : BaseActivity() {
             if (helper.isSupported()) {
                 window.decorView.doOnLayout {
                     helper.setAnimationView(window.decorView)
-                    helper.setupSeamlessTransition(
-                        callback = object : OplusViewSeamless.AnimationCallback {
-                            override fun onAnimationStart() {}
-                            override fun onAnimationEnd() {}
-                        }
-                    )
+                    helper.setupSeamlessTransition()
                 }
             }
         }
