@@ -124,6 +124,7 @@ class UnicodeActivity : BaseActivity() {
     private lateinit var pref: SharedPreferences
     private var action: String? = null
     private var created = false
+    private var seamlessHelper: SeamlessAnimationHelper? = null
     private var disableime = false
     private var delay: Runnable? = null
     private var timer = 500
